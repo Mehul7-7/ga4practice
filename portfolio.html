@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Projects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #000046, #1cb5e0);
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      padding: 2rem;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      animation: slideIn 0.8s ease-in-out;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 1.5rem;
+      border-radius: 1rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+
+    a.btn {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.8rem 1.5rem;
+      background-color: #ffffff;
+      color: #000046;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    a.btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <h2>My Projects</h2>
+  <div class="projects">
+    <div class="card">
+      <h3>NGO Website</h3>
+      <p>Built for a college initiative. Responsive, user-friendly, and impactful.</p>
+    </div>
+    <div class="card">
+      <h3>SEO Case Study</h3>
+      <p>Ranked a project site in the top 3 for niche keywords. Used GA4, GSC, GTM.</p>
+    </div>
+    <div class="card">
+      <h3>Lifebuoy Social Campaign</h3>
+      <p>Gamified Instagram campaign increasing engagement 4x organically.</p>
+    </div>
+  </div>
+  <div style="text-align: center">
+    <a href="index.html" class="btn">Back to Home</a>
+  </div>
+</body>
+</html>
