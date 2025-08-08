@@ -14,91 +14,106 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      background: linear-gradient(135deg, #000046, #1cb5e0);
-      font-family: 'Poppins', sans-serif;
-      color: #fff;
-      padding: 2rem;
-    }
+  body {
+    background: linear-gradient(135deg, #000046, #1cb5e0);
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    padding: 2rem;
+  }
 
-    h2 {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 2rem;
-      animation: slideIn 0.8s ease-in-out;
-    }
+  h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    animation: slideIn 0.8s ease-in-out;
+  }
 
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
 
-    .card {
-      background-color: rgba(255, 255, 255, 0.1);
-      padding: 1.5rem;
-      border-radius: 1rem;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
+  .card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-    }
+  .card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+  }
 
+  .card h3 {
+    font-size: 1.2rem;
+    margin: 1rem 1rem 0.5rem;
+  }
 
-    
-    a.btn {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 0.8rem 1.5rem;
-      background-color: #ffffff;
-      color: #000046;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: bold;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
+  .card p {
+    font-size: 0.9rem;
+    margin: 0 1rem 1rem;
+    flex-grow: 1;
+  }
 
-    a.btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-    }
+  .card a.btn {
+    display: inline-block;
+    margin: 0 1rem 1rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #ffffff;
+    color: #000046;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+  }
 
-    .linkedin-card {
-      max-width: 400px;
-      margin: 3rem auto;
-      padding: 1.5rem;
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 1rem;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-      text-align: center;
-      animation: slideIn 0.8s ease-in-out;
-    }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  }
 
-    .linkedin-card img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 1rem;
-      border: 3px solid #fff;
-    }
+  .card a.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
 
-    .linkedin-card h3 {
-      margin: 0.5rem 0 0.2rem;
-    }
+  /* LinkedIn Card */
+  .linkedin-card {
+    max-width: 350px;
+    margin: 3rem auto;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: slideIn 0.8s ease-in-out;
+  }
 
-    .linkedin-card p {
-      font-size: 0.95rem;
-      margin-bottom: 1rem;
-    }
+  .linkedin-card img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #fff;
+  }
 
-    @keyframes slideIn {
-      from { transform: translateY(50px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-  </style>
+  @keyframes slideIn {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+</style>
+
 </head>
 <body>
   <h2>My Projects</h2>
@@ -113,19 +128,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <div class="card">
     <h3>Saas Website</h3>
     <p>Built a real world website. Responsive, and user-friendly.</p>
-    <a href="https://www.railwaysmutualtransfer.com/" class="btn" target="_blank">View LinkedIn</a>
+    <a href="https://www.railwaysmutualtransfer.com/" class="btn" target="_blank">Visit</a>
   </div>
 
   <div class="card">
-    <h3>SEO Case Study</h3>" class="btn" target="_blank">View Project</a>
-    <a href="https://www.linkedin.com/posts/pranav-tyagi-37978b121_organic-search-x-mokobara-activity-7339698191350538242-O9YN/?utm_source=share&utm_medium=member_ios&rcm=ACoAAD2D1AEBCBjdyROjCkZ9sFzoTGSZcG3-0wg
+    <h3>SEO Case Study</h3>
+    <a href="https://www.linkedin.com/posts/pranav-tyagi-37978b121_organic-search-x-mokobara-activity-7339698191350538242-O9YN/?utm_source=share&utm_medium=member_ios&rcm=ACoAAD2D1AEBCBjdyROjCkZ9sFzoTGSZcG3-0wg" class="btn" target="_blank">View</a>
     <p>Ranked a project site in the top 3 for niche keywords. Used GA4, GSC, GTM.</p>
   </div>
 
   <div class="card">
-    <img src="images/lifebuoy-campaign.jpg" alt="Lifebuoy Campaign Screenshot">
     <h3>Lifebuoy Social Campaign</h3>
     <p>Gamified Instagram campaign increasing engagement 4x organically.</p>
+      <a href="https://mehul7-7.github.io/wash-wars/" class="btn" target="_blank">Play Now</a>
   </div>
 
 </div>
